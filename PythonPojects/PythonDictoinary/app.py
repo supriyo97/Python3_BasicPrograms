@@ -1,5 +1,5 @@
 import json,difflib
-from difflib import get_close_matches
+from difflib import get_close_matches #get_close_matches helps to get the most nearest common word
 
 data = json.load(open("/home/supriyo/Python3_BasicPrograms/PythonPojects/PythonDictoinary/data.json")) #load and open the data file using json
 
@@ -18,4 +18,9 @@ def dict():
                 print( "wrong input" )
     else:
         return ("No such meaning available.Please double check your word")
-dict()
+d = dict()
+if type(d) == list:
+    for i in d:
+        print(i)
+else:
+    print(d)
