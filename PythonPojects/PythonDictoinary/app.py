@@ -1,8 +1,21 @@
-import json
+import json,difflib
+from difflib import get_close_matches
+
+data = json.load(open("/home/supriyo/Python3_BasicPrograms/PythonPojects/PythonDictoinary/data.json")) #load and open the data file using json
+
 def dict():
-    search = input("Enter a word for get to know about meaning: ")
-    data = json.load(open("/home/supriyo/Python3_BasicPrograms/PythonPojects/PythonDictoinary/data.json"))
-    for i in data.keys():
-        if search == i:
-            return (data[i])
+    search = input("Enter a word for get to know about meaning: ").lower() #converts getting input into lower case:-)
+    if search in data.keys():
+        return (data[search])
+    elif len(get_close_matches(search,data.keys(),cutoff=0.8))>0:
+        while True:
+            a = input(f"Are you looking for {get_close_matches(search,data.keys())[0]} word instead?(y/n): ").lower()
+            if a == "y":
+                return data[get_close_matches(search,data.keys())[0]]
+            elif a == "n":
+                return ("No such meaning available.")
+            else:
+                print( "wrong input" )
+    else:
+        return ("No such meaning available.Please double check your word")
 dict()
