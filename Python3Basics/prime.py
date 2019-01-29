@@ -4,3 +4,5 @@ def prime(n):
         if n%i == 0:
             f+=1
     return(f==2)
+
+prime(4)
