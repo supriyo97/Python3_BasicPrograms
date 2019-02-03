@@ -3,6 +3,6 @@ def fib(n):
 		return n
 	else:
 		return fib(n-1)+fib(n-2)
-n= int(input("what is the number? "))
+n= int(input("what is the range of Fibonacci series? "))
 for i in range(1,n+1):
     print(fib(i))
