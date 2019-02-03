@@ -4,5 +4,5 @@ def fib(n):
 	else:
 		return fib(n-1)+fib(n-2)
 n= int(input("what is the number? "))
-for i in range(0,n):
+for i in range(1,n+1):
     print(fib(i))
