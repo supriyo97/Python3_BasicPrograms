@@ -5,4 +5,6 @@ def prime(n):
             f+=1
     return(f==2)
 
-prime(4)
+
+def sumprimes(l):
+    return sum(n for n in l if prime(n))

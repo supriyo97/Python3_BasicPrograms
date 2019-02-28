@@ -3,5 +3,5 @@ def gcd(m,n):
         (m,n) = (n,m)
     while m%n != 0:
         (m,n) = (n,m%n)
-    return(n)
+    return(print("GCD/HCF of the two number: ",n))
 gcd(222,3)
