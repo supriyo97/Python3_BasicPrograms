@@ -31,3 +31,17 @@ for k in range(n):
     a.append(k)
 key = int(input("Enter KEY: "))
 LSearch(a,key)
+
+import tkinter as tk
+
+win = Tk()
+# ch1 = tk.Checkbutton(win, text="Music", value=1, variable = var1)
+# ch1 = tk.Checkbutton(win, text="Playing", value=2, variable = var2)
+b1 = tk.Button(win,Text = "Submit", command = show())
+b1.pack()
+
+win.mainloop()
+
+print(2+3)
+
+
