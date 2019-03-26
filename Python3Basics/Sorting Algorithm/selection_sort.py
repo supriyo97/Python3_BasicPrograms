@@ -1,6 +1,6 @@
 def selection_sort(array):                   #SELECTION SORT function
     for i in range((len(array)-1)):          #array is group of elements/same types of values
-         = i                         #minindex is the minimum index fo the array
+        minindex = i                         #minindex is the minimum index fo the array
         for j in range(i+1,len(array)):
             if array[j]<array[minindex]:
                 minindex = j
